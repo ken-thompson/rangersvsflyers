@@ -62,8 +62,8 @@ h1, h2 {
   display: inline-block;
   border: 1px solid black;
   width: 0px;
-  transition: width 3s;
-  transition-delay: 1s;
+  transition: width 2s;
+  transition-delay: 1.3s;
   transition-timing-function: ease-in-out;
 }
 #innerFlyersSpan2 {
@@ -93,4 +93,3 @@ h1, h2 {
   transition-delay: 1s;
   transition-timing-function: ease-in-out;
 }
-
