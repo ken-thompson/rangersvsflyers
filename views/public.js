@@ -1,6 +1,6 @@
 onload = () => {
   const xhttp = new XMLHttpRequest();
-  function diff(a, b) { return Math.abs(a - b); }
+diff = (a, b) => { return Math.abs(a - b); }
 
   const responseGenerator = (team, pointsDiff) => {
     let response;
@@ -41,25 +41,21 @@ onload = () => {
           fontModifier = (widthModifier / 1.5);
         }
         if (rangersData.points > flyersData.points) {
-          $(document).ready(() => {
-            document.getElementById('flyers').id = 'flyers-animate';
-            document.getElementById('rangers').id = 'rangers-animate';
+            // document.getElementById('flyers').id = 'flyers-animate';
+            // document.getElementById('rangers').id = 'rangers-animate';
             document.getElementById('flyers-animate').style.width = `${50 - widthModifier}%`;
             document.getElementById('rangers-animate').style.width = `${50 + widthModifier}%`;
             document.getElementById('flyers-animate').style.fontSize = `${36 - fontModifier}px`;
             document.getElementById('rangers-animate').style.fontSize = `${36 + fontModifier}px`;
             document.getElementById('rangers-subtext').innerHTML = responseGenerator('Rangers', pointsDiff);
-          });
         } else if (rangersData.points < flyersData.points) {
-          $(document).ready(() => {
-            document.getElementById('flyers').id = 'flyers-animate';
-            document.getElementById('rangers').id = 'rangers-animate';
+            // document.getElementById('flyers').id = 'flyers-animate';
+            // document.getElementById('rangers').id = 'rangers-animate';
             document.getElementById('flyers-animate').style.width = `${50 + widthModifier}%`;
             document.getElementById('rangers-animate').style.width = `${50 - widthModifier}%`;
             document.getElementById('flyers-animate').style.fontSize = `${36 + fontModifier}px`;
             document.getElementById('rangers-animate').style.fontSize = `${36 - fontModifier}px`;
             document.getElementById('flyers-subtext').innerHTML = responseGenerator('Flyers', pointsDiff);
-          });
         } else if (rangersData.points === flyersData.points) {
           document.getElementById('flyers-subtext').innerHTML = 'Oh no it\'s tied';
           document.getElementById('rangers-subtext').innerHTML = 'Oh no it\'s tied';

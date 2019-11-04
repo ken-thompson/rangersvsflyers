@@ -5,15 +5,6 @@ h1, h2 {
     color:white !important;
 }
 
-#rangers {
-  color: white;
-  width: 50%;
-  font-size: 36px;
-}
-#flyers {
-  width: 50%;
-  font-size: 36px;
-}
 #container {
   width: 100%;
   margin: 0;
@@ -40,21 +31,21 @@ h1, h2 {
 #flyers-animate{
   background-color: #ea7317;
   height: 100%;
-  width: 60%;
+  width: 50%;
   text-align: center;
   padding-top: 14%;
   border-left: 4px solid white;
-  font-size: 60px;
+  font-size: 36px;
   transition: width 2.5s, font-size 2.5s;
 }
 #rangers-animate{
   background-color: #2364aa;
-  width: 40%;
+  width: 50%;
   height: 100%;
   text-align: center;
   padding-top: 14%;
   border-right: 4px solid white;
-  font-size: 24px;
+  font-size: 36px;
   transition: width 2.5s, font-size 2.5s;
 }
 #flyers-subtext {
