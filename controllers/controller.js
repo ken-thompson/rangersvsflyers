@@ -41,7 +41,7 @@ const phlPromise = rp(phlOptions)
   });
 
 const homepage = (req, res) => {
-  Promise.all([nyrPromise, phlPromise])
+  return Promise.all([nyrPromise, phlPromise])
     .then((response) => {
       res.send(response);
     }).catch(() => {

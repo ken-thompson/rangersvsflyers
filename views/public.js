@@ -41,20 +41,24 @@ diff = (a, b) => { return Math.abs(a - b); }
           fontModifier = (widthModifier / 1.5);
         }
         if (rangersData.points > flyersData.points) {
-            // document.getElementById('flyers').id = 'flyers-animate';
-            // document.getElementById('rangers').id = 'rangers-animate';
             document.getElementById('flyers-animate').style.width = `${50 - widthModifier}%`;
             document.getElementById('rangers-animate').style.width = `${50 + widthModifier}%`;
             document.getElementById('flyers-animate').style.fontSize = `${36 - fontModifier}px`;
             document.getElementById('rangers-animate').style.fontSize = `${36 + fontModifier}px`;
+            document.getElementById('innerRangersSpan1').style.width = `500px`;
+            document.getElementById('innerRangersSpan2').style.width = `500px`;
+            document.getElementById('innerFlyersSpan1').style.border = `0px solid black`;
+            document.getElementById('innerFlyersSpan2').style.border = `0px solid black`;
             document.getElementById('rangers-subtext').innerHTML = responseGenerator('Rangers', pointsDiff);
         } else if (rangersData.points < flyersData.points) {
-            // document.getElementById('flyers').id = 'flyers-animate';
-            // document.getElementById('rangers').id = 'rangers-animate';
             document.getElementById('flyers-animate').style.width = `${50 + widthModifier}%`;
             document.getElementById('rangers-animate').style.width = `${50 - widthModifier}%`;
             document.getElementById('flyers-animate').style.fontSize = `${36 + fontModifier}px`;
             document.getElementById('rangers-animate').style.fontSize = `${36 - fontModifier}px`;
+            document.getElementById('innerFlyersSpan1').style.width = `500px`;
+            document.getElementById('innerFlyersSpan2').style.width = `500px`;
+            document.getElementById('innerRangersSpan1').style.border = `0px solid black`;
+            document.getElementById('innerRangersSpan2').style.border = `0px solid black`;
             document.getElementById('flyers-subtext').innerHTML = responseGenerator('Flyers', pointsDiff);
         } else if (rangersData.points === flyersData.points) {
           document.getElementById('flyers-subtext').innerHTML = 'Oh no it\'s tied';
