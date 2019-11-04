@@ -61,36 +61,36 @@ h1, h2 {
   line-height: 76px;
   display: inline-block;
   border: 1px solid black;
-  width: 30px;
-  transition: width 5s ease;
-  transition-delay: 1.5s;
+  width: 0px;
+  transition: width 3s;
+  transition-delay: 1s;
   transition-timing-function: ease-in-out;
 }
 #innerFlyersSpan2 {
   line-height: 76px;
   display: inline-block;
   border: 1px solid black;
-  width: 30px;
-  transition: width 5s;
-  transition-delay: 1.5s;
+  width: 0px;
+  transition: width 3s;
+  transition-delay: 1s;
   transition-timing-function: ease-in-out;
 }
 #innerRangersSpan1 {
   line-height: 76px;
   display: inline-block;
   border: 1px solid white;
-  width: 30px;
-  transition: width 5s;
-  transition-delay: 1.5s;
+  width: 0px;
+  transition: width 3s;
+  transition-delay: 1s;
   transition-timing-function: ease-in-out;
 }
 #innerRangersSpan2 {
   line-height: 76px;
   display: inline-block;
   border: 1px solid white;
-  width: 30px;
-  transition: width 5s;
-  transition-delay: 1.5s;
+  width: 0px;
+  transition: width 3s;
+  transition-delay: 1s;
   transition-timing-function: ease-in-out;
 }
 
