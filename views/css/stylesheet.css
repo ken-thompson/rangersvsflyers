@@ -30,7 +30,7 @@ h1, h2 {
 }
 
 #flyers-animate{
-  background-color: #ea7317;
+  background-color: #d16014;
   height: 100%;
   width: 50%;
   text-align: center;
@@ -54,7 +54,7 @@ h1, h2 {
   font-weight: bold;
 }
 #rangers-subtext {
-  color: black;
+  color: #001f54;
   font-weight: bold;
 }
 #innerFlyersSpan1 {
@@ -78,7 +78,7 @@ h1, h2 {
 #innerRangersSpan1 {
   line-height: 76px;
   display: inline-block;
-  border: 1px solid white;
+  border: 1px solid red;
   width: 0px;
   transition: width 2s;
   transition-delay: 1.3s;
@@ -87,9 +87,9 @@ h1, h2 {
 #innerRangersSpan2 {
   line-height: 76px;
   display: inline-block;
-  border: 1px solid white;
+  border: 1px solid red;
   width: 0px;
-  transition: width 2s;
-  transition-delay: 1.3s;
+  transition: width 3s;
+  transition-delay: 1s;
   transition-timing-function: ease-in-out;
 }

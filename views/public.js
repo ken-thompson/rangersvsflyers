@@ -7,9 +7,9 @@ diff = (a, b) => { return Math.abs(a - b); }
     if (pointsDiff < 5) {
       response = `Tiny ${team} edge`;
     } else if (pointsDiff >= 5 && pointsDiff < 8) {
-      response = `Solid ${team} edge`;
+      response = `${team} edge`;
     } else if (pointsDiff >= 8 && pointsDiff < 12) {
-      response = `Definite ${team} lead`;
+      response = `Decent ${team} lead`;
     } else if (pointsDiff >= 12 && pointsDiff < 15) {
       response = `Major ${team} lead`;
     } else if (pointsDiff >= 15) {
@@ -30,15 +30,22 @@ diff = (a, b) => { return Math.abs(a - b); }
         document.getElementById('flyers-text').innerHTML = `${flyersData.wins}-${flyersData.losses}-${flyersData.ot}`;
         document.getElementById('flyers-points').innerHTML = `${flyersData.points} points`;
         const pointsDiff = diff(rangersData.points, flyersData.points);
+        //const pointsDiff = 24;
         let widthModifier = (1.5 * pointsDiff);
         let fontModifier;
 
-        if (pointsDiff >= 12) {
+        if (pointsDiff < 12) {
           widthModifier = (1.9 * pointsDiff);
           fontModifier = (4 + (widthModifier / 3));
-        } else {
+        } else if (pointsDiff >= 12){
           widthModifier = (1.75 * pointsDiff);
           fontModifier = (widthModifier / 1.5);
+        } else if (pointsDiff >= 25) {
+          widthModifier = (pointsDiff/4);
+          fontModifier = (widthModifier / 1.5);
+        } else if (pointsDiff >= 28) {
+            widthModifier = (100-pointsDiff/100);
+            fontModifier = (widthModifier / 1.5);
         }
         if (rangersData.points > flyersData.points) {
             document.getElementById('flyers-animate').style.width = `${50 - widthModifier}%`;
@@ -50,6 +57,7 @@ diff = (a, b) => { return Math.abs(a - b); }
             document.getElementById('innerFlyersSpan1').style.border = `0px solid black`;
             document.getElementById('innerFlyersSpan2').style.border = `0px solid black`;
             document.getElementById('rangers-subtext').innerHTML = responseGenerator('Rangers', pointsDiff);
+            document.getElementById('flyers-subtext').innerHTML = `${pointsDiff} points behind`;
         } else if (rangersData.points < flyersData.points) {
             document.getElementById('flyers-animate').style.width = `${50 + widthModifier}%`;
             document.getElementById('rangers-animate').style.width = `${50 - widthModifier}%`;
@@ -60,6 +68,7 @@ diff = (a, b) => { return Math.abs(a - b); }
             document.getElementById('innerRangersSpan1').style.border = `0px solid black`;
             document.getElementById('innerRangersSpan2').style.border = `0px solid black`;
             document.getElementById('flyers-subtext').innerHTML = responseGenerator('Flyers', pointsDiff);
+            document.getElementById('rangers-subtext').innerHTML = `${pointsDiff} points behind`;
         } else if (rangersData.points === flyersData.points) {
           document.getElementById('flyers-subtext').innerHTML = 'Oh no it\'s tied';
           document.getElementById('rangers-subtext').innerHTML = 'Oh no it\'s tied';
