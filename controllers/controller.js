@@ -25,7 +25,6 @@ const nyrPromise = rp(nyrOptions)
     return nyrModel;
   })
   .catch(() => {
-    console.log('shit1');
   });
 
 const phlPromise = rp(phlOptions)
@@ -39,7 +38,6 @@ const phlPromise = rp(phlOptions)
     return phlModel;
   })
   .catch(() => {
-    console.log('shit2');
   });
 
 const homepage = (req, res) => {
