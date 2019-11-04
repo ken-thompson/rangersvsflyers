@@ -62,7 +62,7 @@ h1, h2 {
   display: inline-block;
   border: 1px solid black;
   width: 30px;
-  transition: width 6s ease;
+  transition: width 5s ease;
   transition-delay: 1.5s;
   transition-timing-function: ease-in-out;
 }
@@ -71,23 +71,26 @@ h1, h2 {
   display: inline-block;
   border: 1px solid black;
   width: 30px;
-  transition: width 6s;
+  transition: width 5s;
   transition-delay: 1.5s;
   transition-timing-function: ease-in-out;
-
 }
 #innerRangersSpan1 {
   line-height: 76px;
   display: inline-block;
   border: 1px solid white;
   width: 30px;
-  transition: width 1s ease-out;
+  transition: width 5s;
+  transition-delay: 1.5s;
+  transition-timing-function: ease-in-out;
 }
 #innerRangersSpan2 {
   line-height: 76px;
   display: inline-block;
   border: 1px solid white;
   width: 30px;
-  transition: width 7s ease-out;
+  transition: width 5s;
+  transition-delay: 1.5s;
+  transition-timing-function: ease-in-out;
 }
 
