@@ -40,15 +40,13 @@ const phlPromise = rp(phlOptions)
   .catch(() => {
   });
 
-const homepage = (req, res) => {
-  return Promise.all([nyrPromise, phlPromise])
-    .then((response) => {
-      res.send(response);
-    }).catch(() => {
-      res.sendStatus('400');
-      res.end();
-    });
-};
+const homepage = (req, res) => Promise.all([nyrPromise, phlPromise])
+  .then((response) => {
+    res.send(response);
+  }).catch(() => {
+    res.sendStatus('400');
+    res.end();
+  });
 
 module.exports = {
   homepage,
